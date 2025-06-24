@@ -1,0 +1,12 @@
+docker run --name=rest01 -d -p 10067:10067 server01
+docker run --name=rest02 -d -p 10069:10069 server02
+
+
+docker run --name=rest01 --net=multi-docker-example -d -p 10067:10067 server01
+docker run --name=rest02 --net=multi-docker-example -d -p 10069:10069 server02
+
+
+
+
+docker run --name=rest01 --volume c:\shared:/opt/data/ --net=multi-docker-example -d -p 10067:10067 server01
+docker run --name=rest02 --volume c:\shared:/opt/data/ --net=multi-docker-example -d -p 10069:10069 server02
